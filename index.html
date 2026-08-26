@@ -1,0 +1,1236 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sri Sundram Acharya — Vedic Priest, Astrologer & Spiritual Guide</title>
+  <meta name="description" content="Sri Sundram Acharya — Vedic rituals, Bhagavata Katha, astrology consultations, sacred library & events." />
+  <meta name="keywords" content="Sri Sundram Acharya, Vedic Priest, Astrologer, Bhagavata Katha, Pooja, Yajna, Kundali" />
+  <meta name="theme-color" content="#FF9933">
+  <!-- Favicon (simple inline SVG) -->
+  <link rel="icon" href='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect rx="18" width="100" height="100" fill="%23FF9933"/><text x="50" y="58" font-size="48" text-anchor="middle" fill="white" font-family="sans-serif">ॐ</text></svg>'>
+
+  <!-- Fonts & icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@600&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+
+    /* Prevent header overlap when clicking anchor links */
+:target {
+  scroll-margin-top: 90px; /* adjust this if your header height changes */
+}
+
+  /* ================== Palette & Vars ================== */
+  :root{
+    --saffron:#FF9933;
+    --indigo:#222A66;
+    --gold:#FFD700;
+    --ivory:#FFF9F0;
+    --muted:#6b5a49;
+    --card:#ffffff;
+    --glass: rgba(255,250,240,0.88);
+    --shadow: 0 18px 44px rgba(34,42,102,0.08);
+    --radius:14px;
+    --maxw:1180px;
+    --accent-glow: rgba(255,153,51,0.22);
+    --transition: 0.32s ease;
+    color-scheme: light;
+  }
+  [data-theme="dark"]{
+    --card:#0f0f16;
+    --glass: rgba(12,12,18,0.66);
+    --muted:#cfc3b2;
+    --ivory:#0b0b0c;
+    --shadow: 0 22px 56px rgba(0,0,0,0.65);
+    --accent-glow: rgba(212,169,0,0.12);
+  }
+
+  *{box-sizing:border-box}
+  html,body{height:100%;margin:0;background:linear-gradient(180deg,var(--ivory),#fff);color:var(--indigo);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-family:Inter,system-ui,"Segoe UI",Roboto,"Noto Sans",Arial}
+  a{color:inherit}
+  .container{max-width:var(--maxw);margin:0 auto;padding:28px}
+
+  /* ===== Header ===== */
+  header.site-header{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:14px;border-radius:12px;background:linear-gradient(90deg,rgba(255,255,255,0.7),transparent);backdrop-filter: blur(6px);box-shadow:var(--shadow);position:sticky;top:14px;z-index:80;transform:translateY(0);transition:transform .32s ease,opacity .32s ease}
+  header.site-header.hidden{transform:translateY(-130%);opacity:0;pointer-events:none}
+  .brand{display:flex;align-items:center;gap:12px}
+  .logo{width:68px;height:68px;border-radius:12px;background:linear-gradient(135deg,var(--saffron),var(--indigo));display:flex;align-items:center;justify-content:center;font-weight:800;color:white;font-size:22px;box-shadow:0 10px 26px rgba(34,42,102,0.12)}
+  .brand h1{margin:0;font-family:'Playfair Display',serif;color:var(--indigo);font-size:20px}
+  nav.main-nav{display:flex;gap:10px;align-items:center}
+  nav.main-nav a{padding:8px 12px;border-radius:10px;text-decoration:none;color:var(--muted);font-weight:600;transition:transform var(--transition), color var(--transition)}
+  nav.main-nav a.cta{background:linear-gradient(90deg,var(--saffron),var(--indigo));color:white;box-shadow:0 8px 26px rgba(34,42,102,0.12)}
+  nav.main-nav a:hover{transform:translateY(-3px);color:var(--indigo)}
+
+  /* ===== Hero ===== */
+  .hero{
+    display:grid;
+    grid-template-columns:480px 1fr;
+    gap:22px;
+    align-items:center;
+    margin:20px 0 8px;
+  }
+  @media (max-width:980px){ .hero{grid-template-columns:1fr;gap:14px} }
+
+  .hero-left{
+    background:linear-gradient(180deg,var(--glass),transparent);
+    padding:20px;border-radius:16px;
+    box-shadow:var(--shadow);
+    display:flex;flex-direction:column;gap:14px;align-items:center;text-align:center;position:relative;overflow:visible;
+  }
+
+  /* aura animation behind portrait */
+  .aura {
+    position:absolute;
+    width:380px;height:380px;
+    border-radius:50%;
+    background: radial-gradient(circle at 30% 30%, rgba(255,215,100,0.18), rgba(255,153,51,0.06) 35%, transparent 50%);
+    filter: blur(30px);
+    top:-70px;
+    left:50%;
+    transform:translateX(-50%);
+    pointer-events:none;
+    animation: auraPulse 9s ease-in-out infinite;
+    z-index:0;
+  }
+  @keyframes auraPulse {
+    0%{ transform:translateX(-50%) scale(1); opacity:0.95 }
+    50%{ transform:translateX(-50%) scale(1.06); opacity:1 }
+    100%{ transform:translateX(-50%) scale(1); opacity:0.95 }
+  }
+
+  .hero-left img{width:240px;height:240px;border-radius:16px;object-fit:cover;box-shadow:0 18px 40px rgba(34,42,102,0.08);position:relative;z-index:1}
+  .hero-left h2{margin:0;font-family:'Playfair Display',serif;color:var(--indigo);font-size:22px;position:relative;z-index:1}
+  .hero-left p{color:var(--muted);line-height:1.6;z-index:1}
+  .badges{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;z-index:1}
+  .badge{background:linear-gradient(90deg,#fff8ea,#fffaf0);padding:6px 10px;border-radius:999px;color:var(--indigo);font-weight:700;border:1px solid rgba(0,0,0,0.03)}
+
+  .hero-right{display:flex;flex-direction:column;gap:12px}
+  .intro-card{background:var(--card);padding:18px;border-radius:12px;box-shadow:var(--shadow)}
+  .intro-card h3{margin:0;color:var(--saffron)}
+  .intro-card p{color:var(--muted);line-height:1.6}
+
+  .cta-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
+  .btn{display:inline-flex;align-items:center;gap:10px;padding:10px 14px;border-radius:12px;border:0;cursor:pointer;font-weight:700;transition:transform var(--transition), box-shadow var(--transition)}
+  .btn.primary{background:linear-gradient(90deg,var(--saffron),var(--indigo));color:#fff;box-shadow:0 14px 34px rgba(34,42,102,0.08)}
+  .btn.ghost{background:transparent;border:2px solid rgba(0,0,0,0.06);color:var(--indigo)}
+  .btn:hover{transform:translateY(-4px)}
+
+  /* ===== Video ===== */
+  .video-wrap{background:var(--card);border-radius:12px;overflow:hidden;box-shadow:var(--shadow);padding:0}
+  .video-frame{position:relative;padding-top:56.25%}
+  .video-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+  /* ===== Sections reveal ===== */
+  section { margin-top:22px; opacity:0; transform:translateY(18px); transition:opacity .8s ease, transform .8s ease; }
+  section.visible{opacity:1; transform:translateY(0) }
+
+  .section-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px}
+  .section-head h3{margin:0;font-family:'Playfair Display',serif;color:var(--indigo)}
+  .muted{color:var(--muted)}
+
+  /* ===== Services grid ===== */
+  .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  @media (max-width:980px){ .services-grid{grid-template-columns:repeat(2,1fr)} }
+  @media (max-width:640px){ .services-grid{grid-template-columns:1fr} }
+  .service-card{background:linear-gradient(180deg,#fff,#fffaf0);padding:16px;border-radius:12px;box-shadow:var(--shadow);transition:transform .28s,box-shadow .28s}
+  .service-card:hover{transform:translateY(-8px);box-shadow:0 22px 55px var(--accent-glow)}
+  .service-card h4{margin:0;color:var(--saffron)}
+  .service-card p{color:var(--muted);line-height:1.5}
+
+
+
+  /* ===== Services & Pooja Offered ===== */
+  .pooja-services-section{
+    position:relative;
+    overflow:hidden;
+    padding:22px 0 4px;
+  }
+  .pooja-services-section::before{
+    content:"";
+    position:absolute;
+    width:420px;height:420px;
+    right:-180px;top:-120px;
+    background:radial-gradient(circle,rgba(255,153,51,.16),transparent 68%);
+    pointer-events:none;
+    animation:poojaGlow 8s ease-in-out infinite;
+  }
+  @keyframes poojaGlow{
+    0%,100%{transform:scale(1);opacity:.65}
+    50%{transform:scale(1.12);opacity:1}
+  }
+  .pooja-heading{
+    position:relative;
+    text-align:center;
+    margin-bottom:18px;
+  }
+  .pooja-kicker{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:7px 14px;
+    border-radius:999px;
+    background:linear-gradient(90deg,#fff4df,#fffaf0);
+    border:1px solid rgba(255,153,51,.25);
+    color:var(--saffron);
+    font-weight:800;
+    letter-spacing:.2px;
+    box-shadow:0 8px 24px rgba(255,153,51,.08);
+    animation:poojaFloat 3.5s ease-in-out infinite;
+  }
+  @keyframes poojaFloat{
+    0%,100%{transform:translateY(0)}
+    50%{transform:translateY(-4px)}
+  }
+  .pooja-heading h3{
+    margin:12px 0 7px;
+    font-family:'Playfair Display','Noto Sans Devanagari',serif;
+    font-size:clamp(26px,4vw,38px);
+    color:var(--indigo);
+  }
+  .pooja-heading p{
+    max-width:780px;
+    margin:0 auto;
+    color:var(--muted);
+    line-height:1.7;
+  }
+  .pooja-grid{
+    position:relative;
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:16px;
+  }
+  .pooja-card{
+    position:relative;
+    background:linear-gradient(145deg,rgba(255,255,255,.96),rgba(255,250,240,.96));
+    border:1px solid rgba(255,153,51,.12);
+    border-radius:16px;
+    box-shadow:var(--shadow);
+    overflow:hidden;
+    transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease;
+  }
+  .pooja-card:hover{
+    transform:translateY(-6px);
+    border-color:rgba(255,153,51,.35);
+    box-shadow:0 24px 60px rgba(34,42,102,.12);
+  }
+  .pooja-card::after{
+    content:"";
+    position:absolute;
+    left:0;top:0;bottom:0;
+    width:4px;
+    background:linear-gradient(180deg,var(--saffron),var(--indigo));
+    opacity:.8;
+  }
+  .pooja-card summary{
+    list-style:none;
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    padding:17px 18px 17px 20px;
+    font-family:'Noto Sans Devanagari',Inter,sans-serif;
+    font-weight:800;
+    color:var(--indigo);
+  }
+  .pooja-card summary::-webkit-details-marker{display:none}
+  .pooja-icon{
+    width:42px;height:42px;
+    flex:0 0 42px;
+    display:flex;align-items:center;justify-content:center;
+    border-radius:12px;
+    background:linear-gradient(135deg,#fff0d6,#fffaf0);
+    color:var(--saffron);
+    font-size:20px;
+    box-shadow:inset 0 0 0 1px rgba(255,153,51,.12);
+  }
+  .pooja-title-wrap{flex:1;min-width:0}
+  .pooja-title-hi{display:block;font-size:16px;line-height:1.35}
+  .pooja-title-en{display:block;font-family:Inter,sans-serif;font-size:12px;color:var(--muted);font-weight:600;margin-top:3px}
+  .pooja-chevron{font-size:14px;color:var(--saffron);transition:transform .3s ease}
+  .pooja-card[open] .pooja-chevron{transform:rotate(180deg)}
+  .pooja-card[open] summary{background:linear-gradient(90deg,rgba(255,244,223,.75),transparent)}
+  .pooja-list{
+    margin:0;
+    padding:0 18px 16px 20px;
+    border-top:1px solid rgba(34,42,102,.06);
+  }
+  .pooja-item{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:12px;
+    padding:10px 0;
+    border-bottom:1px dashed rgba(107,90,73,.16);
+    font-family:'Noto Sans Devanagari',Inter,sans-serif;
+    animation:poojaItemIn .35s ease both;
+  }
+  .pooja-item:last-child{border-bottom:0}
+  @keyframes poojaItemIn{
+    from{opacity:0;transform:translateX(-6px)}
+    to{opacity:1;transform:translateX(0)}
+  }
+  .pooja-item:nth-child(2){animation-delay:.02s}.pooja-item:nth-child(3){animation-delay:.04s}.pooja-item:nth-child(4){animation-delay:.06s}.pooja-item:nth-child(5){animation-delay:.08s}.pooja-item:nth-child(6){animation-delay:.10s}.pooja-item:nth-child(7){animation-delay:.12s}.pooja-item:nth-child(8){animation-delay:.14s}.pooja-item:nth-child(9){animation-delay:.16s}.pooja-item:nth-child(10){animation-delay:.18s}.pooja-item:nth-child(11){animation-delay:.20s}.pooja-item:nth-child(12){animation-delay:.22s}
+  .pooja-name{color:#44382d;font-size:14px;line-height:1.5}
+  .pooja-price{
+    flex:0 0 auto;
+    padding:5px 9px;
+    border-radius:999px;
+    background:linear-gradient(90deg,#fff0d6,#fff8ec);
+    color:var(--indigo);
+    font-family:Inter,sans-serif;
+    font-size:12px;
+    font-weight:800;
+    white-space:nowrap;
+    border:1px solid rgba(255,153,51,.18);
+  }
+  .pooja-special{
+    grid-column:1 / -1;
+    background:linear-gradient(135deg,#fff7e8,#fff,#fff7ef);
+    border:1px solid rgba(255,153,51,.28);
+  }
+  .pooja-special .pooja-title-hi{font-size:18px;color:#9b4c00}
+  .pooja-note{
+    position:relative;
+    margin-top:18px;
+    padding:18px 20px;
+    border-radius:16px;
+    background:linear-gradient(135deg,rgba(34,42,102,.97),rgba(52,61,122,.97));
+    color:#fff;
+    box-shadow:0 20px 50px rgba(34,42,102,.16);
+    overflow:hidden;
+  }
+  .pooja-note::before{
+    content:"";
+    position:absolute;
+    width:170px;height:170px;
+    right:-60px;top:-70px;
+    border-radius:50%;
+    background:rgba(255,215,0,.12);
+  }
+  .pooja-note strong{color:#ffd76a}
+  .pooja-note p{margin:7px 0 0;line-height:1.7;color:rgba(255,255,255,.88);font-family:'Noto Sans Devanagari',Inter,sans-serif}
+  .pooja-cta{
+    display:flex;
+    justify-content:center;
+    margin-top:16px;
+  }
+  .pooja-book-btn{
+    position:relative;
+    display:inline-flex;
+    align-items:center;
+    gap:9px;
+    padding:12px 20px;
+    border-radius:999px;
+    text-decoration:none;
+    color:#fff;
+    font-weight:800;
+    background:linear-gradient(90deg,var(--saffron),var(--indigo));
+    box-shadow:0 14px 34px rgba(34,42,102,.16);
+    overflow:hidden;
+    transition:transform .3s ease,box-shadow .3s ease;
+  }
+  .pooja-book-btn::after{
+    content:"";
+    position:absolute;
+    top:0;left:-80%;width:45%;height:100%;
+    background:linear-gradient(90deg,transparent,rgba(255,255,255,.35),transparent);
+    transform:skewX(-20deg);
+    animation:buttonShine 3.2s infinite;
+  }
+  @keyframes buttonShine{0%,55%{left:-80%}75%,100%{left:140%}}
+  .pooja-book-btn:hover{transform:translateY(-4px);box-shadow:0 20px 42px rgba(34,42,102,.22)}
+  @media (max-width:760px){
+    .pooja-grid{grid-template-columns:1fr}
+    .pooja-special{grid-column:auto}
+  }
+  @media (max-width:520px){
+    .pooja-card summary{padding:14px 14px 14px 16px}
+    .pooja-list{padding:0 14px 12px 16px}
+    .pooja-item{align-items:flex-start}
+    .pooja-name{font-size:13px}
+    .pooja-price{font-size:11px;padding:4px 7px}
+  }
+
+  /* ===== Testimonials & Events styling ===== */
+  .test-card{background:linear-gradient(180deg,#fff,#fff8f0);padding:14px;border-radius:12px;box-shadow:var(--shadow);margin-bottom:12px}
+  .test-card p{color:var(--muted)}
+
+  /* ===== Blog cards ===== */
+  .blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  @media (max-width:980px){ .blog-grid{grid-template-columns:repeat(2,1fr)} }
+  @media (max-width:640px){ .blog-grid{grid-template-columns:1fr} }
+  .blog-card{background:var(--card);padding:12px;border-radius:10px;box-shadow:var(--shadow);transition:transform .28s}
+  .blog-card:hover{transform:translateY(-6px)}
+
+  /* ===== Library (PDF) ===== */
+  .book-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  @media (max-width:980px){ .book-grid{grid-template-columns:repeat(2,1fr)} }
+  @media (max-width:640px){ .book-grid{grid-template-columns:1fr} }
+  .book-card{background:linear-gradient(180deg,#fff,#fffaf0);padding:12px;border-radius:12px;box-shadow:var(--shadow);display:flex;flex-direction:column}
+  .book-card .cover{height:160px;border-radius:8px;overflow:hidden;margin-bottom:10px}
+  .book-card .cover img{width:100%;height:100%;object-fit:cover}
+
+  /* ===== Gallery ===== */
+  .gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+  @media (max-width:1100px){ .gallery-grid{grid-template-columns:repeat(3,1fr)} }
+  @media (max-width:760px){ .gallery-grid{grid-template-columns:repeat(2,1fr)} }
+  .gallery-item{border-radius:12px;overflow:hidden;position:relative;padding-bottom:70%;background:#000;cursor:pointer;box-shadow:var(--shadow);transition:transform .28s}
+  .gallery-item img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s}
+  .gallery-item:hover{transform:translateY(-6px)}
+  .gallery-caption{position:absolute;left:12px;bottom:12px;color:#fff;font-weight:700;text-shadow:0 6px 24px rgba(0,0,0,0.5);font-size:13px}
+
+  /* ===== Lightbox ===== */
+  .lightbox{position:fixed;inset:0;background:rgba(0,0,0,0.86);display:none;align-items:center;justify-content:center;padding:20px;z-index:9999}
+  .lightbox .frame{max-width:1100px;max-height:90vh;border-radius:12px;overflow:hidden;background:#000;position:relative}
+  .lightbox img{width:100%;height:100%;object-fit:contain;display:block}
+  .lightbox .meta{position:absolute;left:18px;bottom:12px;color:#fff;font-size:13px}
+  .lightbox .close{position:absolute;top:10px;right:10px;background:rgba(255,255,255,0.08);border-radius:8px;padding:8px;border:none;color:#fff;cursor:pointer}
+
+  /* ===== Booking form ===== */
+  .booking-wrap{margin-top:18px;padding:16px;border-radius:12px;background:linear-gradient(180deg,var(--glass),#fff);box-shadow:var(--shadow)}
+  form.booking-form{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+  @media (max-width:980px){ form.booking-form{grid-template-columns:repeat(2,1fr)} }
+  @media (max-width:640px){ form.booking-form{grid-template-columns:1fr} }
+  input,textarea,select{padding:10px;border-radius:8px;border:1px solid rgba(0,0,0,0.06);font-size:1rem}
+  textarea{min-height:100px}
+  .form-actions{grid-column:span 3;display:flex;gap:10px;align-items:center}
+  @media (max-width:640px){ .form-actions{grid-column:span 1;flex-direction:column} }
+
+  /* ===== Floating CTAs ===== */
+  .floating{position:fixed;right:18px;bottom:18px;display:flex;flex-direction:column;gap:10px;z-index:999}
+  .floating.hidden{opacity:0;transform:translateY(20px);pointer-events:none}
+  .float-wa{background:#25d366;color:white;padding:12px;border-radius:12px;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 30px rgba(37,211,102,0.14);width:56px;height:56px}
+  .float-book{background:linear-gradient(90deg,var(--saffron),var(--indigo));color:#fff;padding:12px 18px;border-radius:12px;font-weight:800;box-shadow:0 18px 44px rgba(34,42,102,0.12);animation:pulse 2.8s infinite}
+  @keyframes pulse{0%{transform:scale(1)}50%{transform:scale(1.04)}100%{transform:scale(1)}}
+
+  /* ===== Daily quote ===== */
+  .daily-quote{padding:12px;border-radius:10px;background:linear-gradient(90deg,rgba(255,249,220,0.9),rgba(255,245,205,0.9));box-shadow:var(--shadow);font-weight:600;color:var(--indigo)}
+
+  /* ===== Footer ===== */
+  footer{margin-top:28px;padding:28px 18px;text-align:center;color:var(--muted);font-size:14px;position:relative;z-index:10}
+  /* ensure footer content is accessible below floating CTAs */
+  .footer-socials{display:flex;gap:12px;justify-content:center;align-items:center;margin-top:10px}
+  .footer-socials a{display:inline-flex;align-items:center;justify-content:center;padding:8px;border-radius:8px}
+
+  /* ===== Utilities & small screens ===== */
+  .center{text-align:center}
+  .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+  @media (max-width:520px){ .intro-card p{font-size:14px} .hero-left img{width:200px;height:200px} }
+
+  /* === Mobile responsiveness improvements === */
+
+/* Prevent any horizontal scrolling on small screens */
+html, body {
+  overflow-x: hidden;
+}
+
+/* Make header fit inside screen on mobile */
+@media (max-width: 768px) {
+  header.site-header {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+
+  nav.main-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
+    width: 100%;
+  }
+
+  nav.main-nav a {
+    padding: 8px 10px;
+    font-size: 14px;
+  }
+
+  .brand h1 {
+    font-size: 18px;
+  }
+
+  .logo {
+    width: 52px;
+    height: 52px;
+    font-size: 18px;
+  }
+}
+
+/* Allow header to scroll up instead of sticking */
+header.site-header {
+  position: relative;
+  top: 0;
+}
+
+/* --- Lightbox Styles (FINAL WORKING VERSION) --- */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  padding: 20px;
+}
+
+.lightbox .frame {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+}
+
+.lightbox .meta {
+  color: #fff;
+  margin-top: 10px;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.lightbox .close {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  background: white;
+  color: black;
+  border: none;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+
+
+/* --- PDF Lightbox Preview --- */
+.pdf-lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+  padding: 20px;
+}
+
+.pdf-frame {
+  position: relative;
+  background: #fff;
+  width: 80vw;
+  height: 90vh;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.pdf-frame iframe {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.close-btn {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  background: #ff5555;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  font-size: 1.4rem;
+  cursor: pointer;
+  line-height: 0;
+}
+
+
+
+  </style>
+</head>
+<body>
+
+  <div class="container" id="page">
+
+    <!-- Header -->
+    <header class="site-header" role="banner" aria-label="Main header">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">श्री</div>
+        <div>
+          <h1>Sri Sundram Acharya</h1>
+          <div class="muted" style="font-size:13px">Vedic Priest • Astrologer • Spiritual Guide</div>
+        </div>
+      </div>
+
+      <nav class="main-nav" role="navigation" aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#library">Library</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <section id="home" class="hero" aria-labelledby="hero-title">
+      <div class="hero-left" role="region" aria-label="Portrait and quick actions">
+        <div class="aura" aria-hidden="true"></div>
+        <!-- Replace with your high-res portrait -->
+        <img src="https://lh3.googleusercontent.com/d/1ZorZ9Bt3FTATkMZ1Fn3rUBrY_NTP8frM" alt="Sri Sundram Acharya portrait" />
+        <h2 id="hero-title">Sri Sundram Acharya</h2>
+        <p class="muted">10+ years guiding devotees through Vedic rituals, Bhagavata Kathā and personalized astrology.</p>
+
+        <div class="badges">
+          <span class="badge">Vedic Priest</span>
+          <span class="badge">Astrologer</span>
+          <span class="badge">Bhagavata Katha</span>
+        </div>
+
+        <div style="margin-top:12px;" class="cta-row">
+          <a class="btn ghost" href="#library"><i class="fa fa-book-open"></i> View Library</a>
+        </div>
+
+        <div style="margin-top:12px;width:100%;display:flex;justify-content:center" aria-hidden="true">
+          <div class="daily-quote" id="dailyQuote">Loading wisdom…</div>
+        </div>
+      </div>
+
+      <div class="hero-right" role="region" aria-label="Introduction and video">
+        <div class="intro-card" role="article">
+          <h3>About Sri Sundram Acharya</h3>
+          <p class="muted">आचार्य जी ने वैदिक परम्परा में दीक्षा प्राप्त की है। वे पूजा, यज्ञ और मुहूर्त विधान में निपुण हैं तथा लोगों को जीवन-निर्णयों में वैदिक अनुसार मार्गदर्शन देते हैं। उनकी विशेषता व्यावहारिक सलाह और आध्यात्मिक उपचार है।</p>
+          <div style="display:flex;gap:10px;margin-top:10px;flex-wrap:wrap">
+            <div class="muted" style="font-size:13px"><strong>Location:</strong> Vaishali, Bihar</div>
+            <div class="muted" style="font-size:13px"><strong>Languages:</strong> Hindi, English</div>
+          </div>
+        </div>
+
+        <div class="video-wrap" style="margin-top:12px">
+          <div class="video-frame" aria-hidden="false">
+            <!-- replaced by JS using YOUTUBE_VIDEO_ID constant so it is easy to configure -->
+            <iframe id="heroVideo" src="https://www.youtube.com/embed/rfy_ZUJA36Y" title="Intro Video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div style="margin-top:8px;text-align:right"><a id="watchOnYouTube" href="https://youtu.be/rfy_ZUJA36Y" target="_blank" class="muted" aria-label="Watch on YouTube"><i class="fa fa-youtube"></i> Watch on YouTube</a></div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- SERVICES & POOJA OFFERED -->
+    <section id="services" class="pooja-services-section" aria-labelledby="pooja-services-title">
+      <div class="pooja-heading">
+        <div class="pooja-kicker"><span>🔱</span> श्री केदारेश्वर ज्योतिष केंद्र <span>🔱</span></div>
+        <h3 id="pooja-services-title">Services &amp; Pooja Offered</h3>
+        <p>पूजा-पाठ एवं वैदिक अनुष्ठान सेवा शुल्क सूची — किसी भी सेवा की पूरी जानकारी देखने के लिए नीचे श्रेणी पर क्लिक करें।</p>
+      </div>
+
+      <div class="pooja-grid">
+        <details class="pooja-card">
+          <summary><span class="pooja-icon">🏠</span><span class="pooja-title-wrap"><span class="pooja-title-hi">1. गृह एवं वास्तु संबंधी पूजा</span><span class="pooja-title-en">Home &amp; Vastu Pooja</span></span><i class="fa fa-chevron-down pooja-chevron"></i></summary>
+          <div class="pooja-list">
+            <div class="pooja-item"><span class="pooja-name">गृह प्रवेश पूजा</span><span class="pooja-price">₹5,100</span></div>
+            <div class="pooja-item"><span class="pooja-name">वास्तु शांति पूजा</span><span class="pooja-price">₹21,000</span></div>
+            <div class="pooja-item"><span class="pooja-name">भूमि पूजन</span><span class="pooja-price">₹5,100</span></div>
+            <div class="pooja-item"><span class="pooja-name">नींव पूजन</span><span class="pooja-price">₹5,100</span></div>
+            <div class="pooja-item"><span class="pooja-name">गृह शांति पूजा</span><span class="pooja-price">₹11,000</span></div>
+            <div class="pooja-item"><span class="pooja-name">नवगृह शांति</span><span class="pooja-price">₹11,000</span></div>
+            <div class="pooja-item"><span class="pooja-name">वास्तु दोष निवारण</span><span class="pooja-price">₹11,000</span></div>
+            <div class="pooja-item"><span class="pooja-name">दुकान/प्रतिष्ठान उद्घाटन पूजा</span><span class="pooja-price">₹5,100</span></div>
+          </div>
+        </details>
+
+        <details class="pooja-card">
+          <summary><span class="pooja-icon">🔱</span><span class="pooja-title-wrap"><span class="pooja-title-hi">2. भगवान शिव एवं रुद्र पूजा</span><span class="pooja-title-en">Lord Shiva &amp; Rudra Pooja</span></span><i class="fa fa-chevron-down pooja-chevron"></i></summary>
+          <div class="pooja-list">
+            <div class="pooja-item"><span class="pooja-name">रुद्राभिषेक</span><span class="pooja-price">₹3,100</span></div>
+            <div class="pooja-item"><span class="pooja-name">लघु रुद्राभिषेक</span><span class="pooja-price">₹2,100</span></div>
+            <div class="pooja-item"><span class="pooja-name">महारुद्राभिषेक</span><span class="pooja-price">₹11,000</span></div>
+            <div class="pooja-item"><span class="pooja-name">शिव-पार्वती पूजा</span><span class="pooja-price">₹5,100</span></div>
+            <div class="pooja-item"><span class="pooja-name">महामृत्युंजय जाप</span><span class="pooja-price">₹51,000</span></div>
+            <div class="pooja-item"><span class="pooja-name">महामृत्युंजय हवन</span><span class="pooja-price">₹11,000</span></div>
+            <div class="pooja-item"><span class="pooja-name">शिव पंचाक्षर जाप</span><span class="pooja-price">₹5,100</span></div>
+          </div>
+        </details>
+
+        <details class="pooja-card">
+          <summary><span class="pooja-icon">☀️</span><span class="pooja-title-wrap"><span class="pooja-title-hi">3. नवग्रह एवं ग्रह शांति</span><span class="pooja-title-en">Navgraha &amp; Planetary Shanti</span></span><i class="fa fa-chevron-down pooja-chevron"></i></summary>
+          <div class="pooja-list">
+            <div class="pooja-item"><span class="pooja-name">नवग्रह शांति पूजा</span><span class="pooja-price">₹11,000</span></div>
+            <div class="pooja-item"><span class="pooja-name">ग्रह शांति अनुष्ठान</span><span class="pooja-price">₹11,000</span></div>
+            <div class="pooja-item"><span class="pooja-name">सूर्य ग्रह शांति</span><span class="pooja-price">₹5,100</span></div>
+            <div class="pooja-item"><span class="pooja-name">चंद्र ग्रह शांति</span><span class="pooja-price">₹5,100</span></div>
+            <div class="pooja-item"><span class="pooja-name">मंगल ग्रह शांति</span><span class="pooja-price">₹5,100</span></div>
+            <div class="pooja-item"><span class="pooja-name">बुध ग्रह शांति</span><span class="pooja-price">₹5,100</span></div>
+            <div class="pooja-item"><span class="pooja-name">गुरु ग्रह शांति</span><span class="pooja-price">₹5,100</span></div>
+            <div class="pooja-item"><span class="pooja-name">शुक्र ग्रह शांति</span><span class="pooja-price">₹5,100</span></div>
+            <div class="pooja-item"><span class="pooja-name">शनि ग्रह शांति</span><span class="pooja-price">₹5,100</span></div>
+            <div class="pooja-item"><span class="pooja-name">राहु शांति</span><span class="pooja-price">₹5,100</span></div>
+            <div class="pooja-item"><span class="pooja-name">केतु शांति</span><span class="pooja-price">₹5,100</span></div>
+          </div>
+        </details>
+
+        <details class="pooja-card">
+          <summary><span class="pooja-icon">🪔</span><span class="pooja-title-wrap"><span class="pooja-title-hi">4. दोष निवारण एवं विशेष शांति</span><span class="pooja-title-en">Dosha Nivaran &amp; Special Shanti</span></span><i class="fa fa-chevron-down pooja-chevron"></i></summary>
+          <div class="pooja-list">
+            <div class="pooja-item"><span class="pooja-name">पितृ दोष शांति</span><span class="pooja-price">₹21,000</span></div>
+            <div class="pooja-item"><span class="pooja-name">कालसर्प दोष शांति</span><span class="pooja-price">₹11,000</span></div>
+            <div class="pooja-item"><span class="pooja-name">मंगल दोष शांति</span><span class="pooja-price">₹5,100</span></div>
+            <div class="pooja-item"><span class="pooja-name">नाग दोष शांति</span><span class="pooja-price">₹11,000</span></div>
+            <div class="pooja-item"><span class="pooja-name">ग्रहण दोष शांति</span><span class="pooja-price">₹11,000</span></div>
+            <div class="pooja-item"><span class="pooja-name">कुंडली दोष निवारण अनुष्ठान</span><span class="pooja-price">₹11,000</span></div>
+            <div class="pooja-item"><span class="pooja-name">शनि दोष निवारण</span><span class="pooja-price">₹11,000</span></div>
+          </div>
+        </details>
+
+        <details class="pooja-card">
+          <summary><span class="pooja-icon">🌺</span><span class="pooja-title-wrap"><span class="pooja-title-hi">5. देवी पूजा एवं अनुष्ठान</span><span class="pooja-title-en">Devi Pooja &amp; Anushthan</span></span><i class="fa fa-chevron-down pooja-chevron"></i></summary>
+          <div class="pooja-list">
+            <div class="pooja-item"><span class="pooja-name">दुर्गा पूजा</span><span class="pooja-price">₹5,100</span></div>
+            <div class="pooja-item"><span class="pooja-name">लक्ष्मी पूजा</span><span class="pooja-price">₹5,100</span></div>
+            <div class="pooja-item"><span class="pooja-name">सरस्वती पूजा</span><span class="pooja-price">₹3,100</span></div>
+            <div class="pooja-item"><span class="pooja-name">काली पूजा</span><span class="pooja-price">₹5,100</span></div>
+            <div class="pooja-item"><span class="pooja-name">नवदुर्गा पूजा</span><span class="pooja-price">₹11,000</span></div>
+            <div class="pooja-item"><span class="pooja-name">शारदीय नवरात्रि अनुष्ठान</span><span class="pooja-price">₹31,000</span></div>
+            <div class="pooja-item"><span class="pooja-name">नवरात्रि घटस्थापना</span><span class="pooja-price">₹2,100</span></div>
+            <div class="pooja-item"><span class="pooja-name">चंडी पाठ</span><span class="pooja-price">₹11,000</span></div>
+            <div class="pooja-item"><span class="pooja-name">शतचंडी यज्ञ</span><span class="pooja-price">₹51,000</span></div>
+          </div>
+        </details>
+
+        <details class="pooja-card">
+          <summary><span class="pooja-icon">🙏</span><span class="pooja-title-wrap"><span class="pooja-title-hi">6. सामान्य धार्मिक पूजा</span><span class="pooja-title-en">General Religious Pooja</span></span><i class="fa fa-chevron-down pooja-chevron"></i></summary>
+          <div class="pooja-list">
+            <div class="pooja-item"><span class="pooja-name">सत्यनारायण पूजा</span><span class="pooja-price">₹1,100</span></div>
+            <div class="pooja-item"><span class="pooja-name">गणेश पूजा</span><span class="pooja-price">₹1,100</span></div>
+            <div class="pooja-item"><span class="pooja-name">विष्णु पूजा</span><span class="pooja-price">₹2,100</span></div>
+            <div class="pooja-item"><span class="pooja-name">हनुमान पूजा</span><span class="pooja-price">₹2,100</span></div>
+            <div class="pooja-item"><span class="pooja-name">सुंदरकांड पाठ</span><span class="pooja-price">₹2,100</span></div>
+            <div class="pooja-item"><span class="pooja-name">रामायण पाठ</span><span class="pooja-price">₹5,100</span></div>
+            <div class="pooja-item"><span class="pooja-name">महामृत्युंजय पाठ</span><span class="pooja-price">₹5,100</span></div>
+            <div class="pooja-item"><span class="pooja-name">विष्णु सहस्रनाम पाठ</span><span class="pooja-price">₹2,100</span></div>
+            <div class="pooja-item"><span class="pooja-name">हनुमान चालीसा पाठ</span><span class="pooja-price">₹1,100</span></div>
+          </div>
+        </details>
+
+        <details class="pooja-card">
+          <summary><span class="pooja-icon">🕉️</span><span class="pooja-title-wrap"><span class="pooja-title-hi">7. संस्कार एवं वैदिक कर्म</span><span class="pooja-title-en">Sanskar &amp; Vedic Karm</span></span><i class="fa fa-chevron-down pooja-chevron"></i></summary>
+          <div class="pooja-list">
+            <div class="pooja-item"><span class="pooja-name">नामकरण संस्कार</span><span class="pooja-price">₹2,100</span></div>
+            <div class="pooja-item"><span class="pooja-name">अन्नप्राशन संस्कार</span><span class="pooja-price">₹2,100</span></div>
+            <div class="pooja-item"><span class="pooja-name">मुंडन संस्कार</span><span class="pooja-price">₹2,100</span></div>
+            <div class="pooja-item"><span class="pooja-name">उपनयन/जनेऊ संस्कार</span><span class="pooja-price">₹11,000</span></div>
+            <div class="pooja-item"><span class="pooja-name">विवाह संस्कार</span><span class="pooja-price">₹21,000</span></div>
+            <div class="pooja-item"><span class="pooja-name">सगाई/वाग्दान पूजा</span><span class="pooja-price">₹5,100</span></div>
+            <div class="pooja-item"><span class="pooja-name">पुंसवन संस्कार</span><span class="pooja-price">₹5,100</span></div>
+            <div class="pooja-item"><span class="pooja-name">सीमंतोन्नयन संस्कार</span><span class="pooja-price">₹5,100</span></div>
+            <div class="pooja-item"><span class="pooja-name">गृहस्थ जीवन शांति पूजा</span><span class="pooja-price">₹5,100</span></div>
+          </div>
+        </details>
+
+        <details class="pooja-card">
+          <summary><span class="pooja-icon">🔥</span><span class="pooja-title-wrap"><span class="pooja-title-hi">8. यज्ञ एवं हवन</span><span class="pooja-title-en">Yajna &amp; Havan</span></span><i class="fa fa-chevron-down pooja-chevron"></i></summary>
+          <div class="pooja-list">
+            <div class="pooja-item"><span class="pooja-name">गणपति हवन</span><span class="pooja-price">₹3,100</span></div>
+            <div class="pooja-item"><span class="pooja-name">नवग्रह हवन</span><span class="pooja-price">₹5,100</span></div>
+            <div class="pooja-item"><span class="pooja-name">वास्तु हवन</span><span class="pooja-price">₹5,100</span></div>
+            <div class="pooja-item"><span class="pooja-name">महामृत्युंजय हवन</span><span class="pooja-price">₹11,000</span></div>
+            <div class="pooja-item"><span class="pooja-name">दुर्गा हवन</span><span class="pooja-price">₹5,100</span></div>
+            <div class="pooja-item"><span class="pooja-name">लक्ष्मी हवन</span><span class="pooja-price">₹5,100</span></div>
+            <div class="pooja-item"><span class="pooja-name">शांति हवन</span><span class="pooja-price">₹5,100</span></div>
+            <div class="pooja-item"><span class="pooja-name">विशेष वैदिक यज्ञ</span><span class="pooja-price">₹11,000 से</span></div>
+          </div>
+        </details>
+
+        <details class="pooja-card">
+          <summary><span class="pooja-icon">✨</span><span class="pooja-title-wrap"><span class="pooja-title-hi">9. विशेष अनुष्ठान</span><span class="pooja-title-en">Special Anushthan</span></span><i class="fa fa-chevron-down pooja-chevron"></i></summary>
+          <div class="pooja-list">
+            <div class="pooja-item"><span class="pooja-name">श्रीसूक्त अनुष्ठान</span><span class="pooja-price">₹5,100</span></div>
+            <div class="pooja-item"><span class="pooja-name">पुरुषसूक्त अनुष्ठान</span><span class="pooja-price">₹5,100</span></div>
+            <div class="pooja-item"><span class="pooja-name">रुद्रसूक्त पाठ</span><span class="pooja-price">₹3,100</span></div>
+            <div class="pooja-item"><span class="pooja-name">विष्णु यज्ञ</span><span class="pooja-price">₹11,000</span></div>
+            <div class="pooja-item"><span class="pooja-name">लक्ष्मी नारायण पूजा</span><span class="pooja-price">₹11,000</span></div>
+            <div class="pooja-item"><span class="pooja-name">धन-समृद्धि विशेष अनुष्ठान</span><span class="pooja-price">₹11,000</span></div>
+            <div class="pooja-item"><span class="pooja-name">संतान प्राप्ति विशेष अनुष्ठान</span><span class="pooja-price">₹11,000</span></div>
+            <div class="pooja-item"><span class="pooja-name">स्वास्थ्य एवं आयु वृद्धि अनुष्ठान</span><span class="pooja-price">₹11,000</span></div>
+            <div class="pooja-item"><span class="pooja-name">व्यवसाय वृद्धि अनुष्ठान</span><span class="pooja-price">₹11,000</span></div>
+          </div>
+        </details>
+
+        <details class="pooja-card pooja-special" open>
+          <summary><span class="pooja-icon">👑</span><span class="pooja-title-wrap"><span class="pooja-title-hi">🔱 विशेष महायज्ञ</span><span class="pooja-title-en">Special Maha Yajna</span></span><i class="fa fa-chevron-down pooja-chevron"></i></summary>
+          <div class="pooja-list">
+            <div class="pooja-item"><span class="pooja-name">शतचंडी महायज्ञ</span><span class="pooja-price">₹51,000</span></div>
+            <div class="pooja-item"><span class="pooja-name">महामृत्युंजय महायज्ञ</span><span class="pooja-price">₹51,000</span></div>
+            <div class="pooja-item"><span class="pooja-name">नवरात्रि विशेष अनुष्ठान</span><span class="pooja-price">₹31,000</span></div>
+            <div class="pooja-item"><span class="pooja-name">वास्तु शांति महाअनुष्ठान</span><span class="pooja-price">₹21,000</span></div>
+            <div class="pooja-item"><span class="pooja-name">पितृ दोष शांति महाअनुष्ठान</span><span class="pooja-price">₹21,000</span></div>
+          </div>
+        </details>
+      </div>
+
+      <div class="pooja-note">
+        <strong>📌 महत्वपूर्ण सूचना</strong>
+        <p>पूजा सामग्री, ब्राह्मण संख्या, स्थान, अवधि एवं अनुष्ठान की विस्तृत विधि के अनुसार सेवा शुल्क में परिवर्तन हो सकता है।</p>
+        <p>🙏 वैदिक विधि-विधान से पूजा एवं अनुष्ठान संपन्न कराए जाते हैं।</p>
+        <p><strong>श्री केदारेश्वर ज्योतिष केंद्र</strong><br>श्री सुन्दरम आचार्य<br>वेद विभूषण से सम्मानित</p>
+      </div>
+
+      <div class="pooja-cta">
+        <a class="pooja-book-btn" href="booking.html"><i class="fa fa-calendar-check"></i> पूजा / सेवा बुक करें</a>
+      </div>
+    </section>
+
+
+    <!-- Testimonials & Events -->
+    <section id="social">
+      <div class="section-head">
+        <h3>🕉 Testimonials & Upcoming Events</h3>
+        <div class="muted">Real experiences & community gatherings</div>
+      </div>
+
+      <div style="display:flex;gap:16px;flex-wrap:wrap">
+        <div style="flex:1;min-width:260px">
+          <div class="test-card">
+            <p class="muted">"आचार्य जी की सलाह से मेरी नौकरी का मार्ग स्पष्ट हुआ। बहुत शांत और व्यावहारिक सुझाव मिले।" — <strong>Ramesh K.</strong></p>
+          </div>
+          <div class="test-card" style="margin-top:12px">
+            <p class="muted">"हमने श्री सहस्त्र चंडी महायज्ञ करवाया — सभी अनुष्ठान सिद्धान्त के अनुसार संपन्न हुए।" — <strong>Priya S.</strong></p>
+          </div>
+        </div>
+
+        <div style="flex:1;min-width:300px">
+          <div style="background:linear-gradient(180deg,#fff,#fff8f0);padding:12px;border-radius:10px;box-shadow:var(--shadow)">
+            <h4 style="margin:0;color:var(--saffron)">Upcoming Events</h4>
+            <ul style="margin-top:8px;color:var(--muted);line-height:1.6">
+              <li><strong>Srimad Bhagavata Katha</strong> — 10–17 Nov 2025, Vaishali</li>
+              <li><strong>Kundali Shanti & Homa</strong> — 22 Nov 2025 (By appointment)</li>
+            </ul>
+            <div style="margin-top:8px"><a class="btn primary" href="booking.html">Register / Book</a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Insights -->
+    <section id="insights">
+      <div class="section-head">
+        <h3>✍️ Insights — Short Articles</h3>
+        <div class="muted">Practical posts & festival guides</div>
+      </div>
+
+      <div class="blog-grid">
+        <div class="blog-card">
+          <h4>What is Muhurat & Why it matters</h4>
+          <p class="muted">A practical guide to selecting auspicious time for marriage and business — short checklist included.</p>
+          <a href="#" class="muted">Read more →</a>
+        </div>
+        <div class="blog-card">
+          <h4>Three simple daily rituals</h4>
+          <p class="muted">Small practices you can do each morning to centre the mind — recommended mantras and timings.</p>
+          <a href="#" class="muted">Read more →</a>
+        </div>
+        <div class="blog-card">
+          <h4>Understanding Bhagavata: Key themes</h4>
+          <p class="muted">A short primer on devotion, dharma and the stories that change hearts.</p>
+          <a href="#" class="muted">Read more →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Library -->
+    <section id="library" aria-labelledby="library-title">
+      <div class="section-head">
+        <h3 id="library-title">📚 Sacred Library</h3>
+        <div class="muted">Download books, read short excerpts & lessons</div>
+      </div>
+
+      <div class="book-grid" id="bookGrid">
+        <!-- Placeholder book cards -->
+        <div class="book-card">
+          <div class="cover"><img loading="lazy" src="https://lh3.googleusercontent.com/d/16RCkSn-InkfdbXGBTXAUYImF7Dljp0NX" alt="Bhagavatam cover"></div>
+          <h4>Srimad Bhagavatam — Essence</h4>
+          <div class="muted">Bhagavata Purana — summaries & teachings</div>
+          <p class="muted">A short extract on devotion and its practice for daily life.</p>
+          <div style="display:flex;gap:8px;margin-top:8px">
+            <a class="btn primary" href="https://drive.google.com/uc?export=download&id=12EI3fFWYRAoIDpCNcueC9z2Zuxfz6n4n" target="_blank" download><i class="fa fa-download"></i> Download PDF</a>
+            <button class="btn ghost" onclick="openBookPreview('https://drive.google.com/file/d/12EI3fFWYRAoIDpCNcueC9z2Zuxfz6n4n/preview')"><i class="fa fa-eye"></i> Preview</button>
+          </div>
+        </div>
+
+        <!-- PDF Lightbox container (initially hidden) -->
+<div id="pdfLightbox" class="pdf-lightbox">
+  <div class="pdf-frame">
+    <button class="close-btn" onclick="closeBookPreview()">&times;</button>
+    <iframe id="pdfViewer" src="" frameborder="0"></iframe>
+  </div>
+</div>
+
+        <div class="book-card">
+          <div class="cover"><img loading="lazy" src="https://lh3.googleusercontent.com/d/1gehy3c2PzGhajDflAJmalnY5R2JVMQHu" alt="Rigveda cover"></div>
+          <h4>Rigveda — Selected Hymns</h4>
+          <div class="muted">Selected translations & context</div>
+          <p class="muted">A short explanation of core suktas and their use in rituals.</p>
+          <div style="display:flex;gap:8px;margin-top:8px">
+            <a class="btn primary" href="https://drive.google.com/uc?export=download&id=1Tg-pLbgRhV1Ydy-ewxdZc0s6tNW_A15m" target="_blank" download><i class="fa fa-download"></i> Download PDF</a>
+            <button class="btn ghost" onclick="openBookPreview('https://drive.google.com/file/d/1Tg-pLbgRhV1Ydy-ewxdZc0s6tNW_A15m/preview')"><i class="fa fa-eye"></i> Preview</button>
+          </div>
+        </div>
+
+        <div class="book-card">
+          <div class="cover"><img loading="lazy" src="https://lh3.googleusercontent.com/d/1ftjt_KjEde80LFZ-L0xClH26WaLoNI0m" alt="Yajurveda cover"></div>
+          <h4>Yajurveda — Ritual Guide</h4>
+          <div class="muted">Yajna & homa procedures</div>
+          <p class="muted">Practical steps for yajna preparation and mantra usage.</p>
+          <div style="display:flex;gap:8px;margin-top:8px">
+            <a class="btn primary" href="https://drive.google.com/uc?export=download&id=1At6D_TH8JInhTbeZ7QKY7C_a_gp-8lJt" target="_blank" download><i class="fa fa-download"></i> Download PDF</a>
+            <button class="btn ghost" onclick="openBookPreview('https://drive.google.com/file/d/1At6D_TH8JInhTbeZ7QKY7C_a_gp-8lJt/preview')"><i class="fa fa-eye"></i> Preview</button>
+          </div>
+        </div>
+
+        <div class="book-card">
+          <div class="cover"><img loading="lazy" src="https://c.ndtvimg.com/2025-09/m2nf37mg_chanakya-niti_625x300_05_September_25.jpg?im=FitAndFill,algorithm=dnn,width=1200,height=738" alt="Chanakya Niti cover"></div>
+          <h4>Chanakya Niti — Collection of practical principles on strategy, ethics, and everyday life</h4>
+          <div class="muted">Full Book in detail</div>
+          <p class="muted">Chanakya Niti offers timeless wisdom.</p>
+          <div style="display:flex;gap:8px;margin-top:8px">
+            <a class="btn primary" href="https://drive.google.com/uc?export=download&id=1byJ_ouEePmDRHpMsKcaPfAVi2Y47OfXt" target="_blank" download><i class="fa fa-download"></i> Download PDF</a>
+            <button class="btn ghost" onclick="openBookPreview('https://drive.google.com/file/d/1byJ_ouEePmDRHpMsKcaPfAVi2Y47OfXt/preview')"><i class="fa fa-eye"></i> Preview</button>
+          </div>
+        </div>
+
+        <div class="book-card">
+          <div class="cover"><img loading="lazy" src="https://m.media-amazon.com/images/I/911bOcsJktL._AC_UF1000,1000_QL80_.jpg"></div>
+          <h4>Strotra Ratnavali — a revered collection of Sanskrit hymns and prayers</h4>
+          <div class="muted">Full Book in detail</div>
+          <p class="muted">sacred hymns dedicated to deities such as Lord Ganesh, Shiv, Vishnu, Shri Ram.</p>
+          <div style="display:flex;gap:8px;margin-top:8px">
+            <a class="btn primary" href="https://drive.google.com/uc?export=download&id=1XqnvxanqqxIRpYin_Xq1yg8M-mdD0Lse" target="_blank" download><i class="fa fa-download"></i> Download PDF</a>
+            <button class="btn ghost" onclick="openBookPreview('https://drive.google.com/file/d/1XqnvxanqqxIRpYin_Xq1yg8M-mdD0Lse/preview')"><i class="fa fa-eye"></i> Preview</button>
+          </div>
+        </div>
+
+
+
+        <div class="book-card">
+          <div class="cover"><img loading="lazy" src="https://shreegajananbookdepot.com/cdn/shop/files/shaptashati-pothi.jpg?v=1710491183&width=1946" alt="Durga Saptashi cover"></div>
+          <h4>Durga Saptashi —  also called Chandi Path or Devi Mahatmya</h4>
+          <div class="muted">Durga Saptashi - Full Book in detail</div>
+          <p class="muted"> A sacred Hindu text of 700 verses praising Goddess Durga.</p>
+          <div style="display:flex;gap:8px;margin-top:8px">
+            <a class="btn primary" href="https://drive.google.com/uc?export=download&id=15rno4b_eICDdayhwdNrxQTSv133ocnSu" target="_blank" download><i class="fa fa-download"></i> Download PDF</a>
+            <button class="btn ghost" onclick="openBookPreview('https://drive.google.com/file/d/15rno4b_eICDdayhwdNrxQTSv133ocnSu/preview')"><i class="fa fa-eye"></i> Preview</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery">
+      <div class="section-head">
+        <h3>📸 Sacred Gallery</h3>
+        <div class="muted">Rituals, yatras and community events</div>
+      </div>
+
+      <div class="gallery-grid" id="galleryGrid">
+        <!-- Will be populated by JS -->
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+      <div class="section-head">
+        <h3>❓ Frequently Asked Questions</h3>
+        <div class="muted">Quick answers for visitors</div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:12px">
+        <div style="background:var(--card);padding:12px;border-radius:10px;box-shadow:var(--shadow)">
+          <strong>How can I book a consultation?</strong>
+          <p class="muted">Use the form below, or message on WhatsApp — we'll confirm by email and send a calendar invite.</p>
+        </div>
+        <div style="background:var(--card);padding:12px;border-radius:10px;box-shadow:var(--shadow)">
+          <strong>What should I bring for a Kundali reading?</strong>
+          <p class="muted">Birth date, exact birth time (if possible), birthplace and any specific questions.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" style="margin-top:18px">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+        <div>
+          <h3 style="margin:0;color:var(--indigo)">Contact</h3>
+          <p class="muted">Email: <a href="mailto:srisundramaacharya@gmail.com">srisundramaacharya@gmail.com</a> • Phone: <a href="tel:+917484045244">+91 74840 45244</a></p>
+          <div class="muted">Address: Pachrukhi, Rikhar, Lalganj, Vaishali, Bihar 844123</div>
+        </div>
+        <div style="text-align:right">
+          <div class="muted">Follow</div>
+          <div class="footer-socials" style="display:flex;gap:8px;margin-top:8px;justify-content:flex-end">
+            <a href="https://www.instagram.com/sri_sundram_acharya" target="_blank" aria-label="Instagram"><i class="fab fa-instagram fa-lg"></i></a>
+            <a href="https://x.com/Sri_sundram" target="_blank" aria-label="X/Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.facebook.com/share/1bsEq7fmTL/" target="_blank" aria-label="Facebook">
+  <i class="fab fa-facebook-f fa-lg"></i>
+</a>
+            <a href="https://www.youtube.com/@Sri_sundram_acharya" target="_blank" aria-label="YouTube"><i class="fab fa-youtube fa-lg"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer id="siteFooter">
+      <div style="max-width:900px;margin:0 auto">
+        <small>© 2025 Sri Sundram Acharya — All Rights Reserved.</small>
+        <div class="footer-socials">
+          <a href="https://www.instagram.com/sri_sundram_acharya" target="_blank" aria-label="Instagram"><i class="fab fa-instagram fa-lg"></i></a>
+          <a href="https://www.facebook.com/share/1FG1BZooqp/" target="_blank" aria-label="Facebook">
+  <i class="fab fa-facebook-f fa-lg"></i>
+</a>
+          <a href="https://x.com/Sri_sundram" target="_blank" aria-label="X/Twitter"><i class="fab fa-twitter fa-lg"></i></a>
+          <a href="https://www.youtube.com/@Sri_sundram_acharya" target="_blank" aria-label="YouTube"><i class="fab fa-youtube fa-lg"></i></a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Floating CTA -->
+  <div class="floating" aria-hidden="false" id="floatingCtas">
+    <a class="float-wa" id="waFloat" href="https://wa.me/917484045244" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp" style="font-size:20px"></i></a>
+    <a class="float-book" href="booking.html" aria-label="Book consultation">Book Now</a>
+    <button class="float-book" id="toggleDark" style="background:linear-gradient(90deg,#fff,#fff);color:var(--indigo);font-weight:700;border:1px solid rgba(0,0,0,0.06)"><i class="fa fa-moon"></i></button>
+  </div>
+
+  <!-- Image Lightbox -->
+  <div class="lightbox" id="imgLightbox" aria-hidden="true" style="display:none">
+    <div class="frame" role="document">
+      <button class="close" id="closeImgLightbox" aria-label="Close image">✕</button>
+      <img id="lightboxImg" alt="Large image preview">
+      <div class="meta" id="lightboxMeta"></div>
+    </div>
+  </div>
+
+  <!-- Book Preview Lightbox -->
+  <div class="lightbox" id="bookPreview" aria-hidden="true" style="display:none">
+    <div class="frame" role="document" style="max-width:900px;padding:12px;background:#fff;border-radius:10px;overflow:hidden">
+      <button class="close" id="closeBookPreview" aria-label="Close preview">✕</button>
+      <iframe id="bookPreviewFrame" src="" style="width:100%;height:70vh;border:0;border-radius:8px"></iframe>
+    </div>
+  </div>
+
+  <!-- Wisdom Modal -->
+  <div class="lightbox" id="wisdomLightbox" aria-hidden="true" style="display:none">
+    <div class="frame" role="document" style="max-width:520px;padding:18px;background:linear-gradient(180deg,#fff,#fff8f0);border-radius:10px">
+      <button class="close" id="closeWisdom" aria-label="Close">✕</button>
+      <div id="wisdomText" style="font-weight:700;color:var(--indigo);font-size:18px"></div>
+      <div style="color:var(--muted);margin-top:10px">Share via WhatsApp to spread the learning.</div>
+      <div style="margin-top:12px;display:flex;gap:8px">
+        <button id="shareWisdomBtn" class="btn primary">Share</button>
+        <button id="nextWisdomBtn" class="btn ghost">Next</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+/***** CONFIG — replace these later when ready *****/
+const FORM_ENDPOINT ="https://formspree.io/f/manlbbkr"; // replace with your actual Formspree endpoint
+const WHATSAPP_NUMBER = "917484045244"; // no '+' sign
+/**************************************************/
+
+/* ---------- gallery images (placeholders) ---------- */
+const galleryImages = [
+  {src:"https://images.pexels.com/photos/34495362/pexels-photo-34495362.jpeg", caption:"Bhagavata Katha"},
+  {src:"https://images.pexels.com/photos/15495237/pexels-photo-15495237.jpeg", caption:"Yajna Ceremony"},
+  {src:"https://images.pexels.com/photos/12738180/pexels-photo-12738180.jpeg", caption:"Havan Ritual"},
+  {src:"https://images.pexels.com/photos/3731615/pexels-photo-3731615.jpeg", caption:"Temple Event"},
+  {src:"https://images.pexels.com/photos/32924878/pexels-photo-32924878.jpeg", caption:"Devotees Gathering"},
+  {src:"https://gurukul.org/wp-content/uploads/2023/04/power-of-satsang-1.png", caption:"Satsang & Katha"},
+  {src:"https://images.pexels.com/photos/30544424/pexels-photo-30544424.jpeg", caption:"Puja Preparations"},
+  {src:"https://images.pexels.com/photos/34473118/pexels-photo-34473118.jpeg", caption:"Blessings"},
+  {src:"https://www.wedgatematrimony.com/wp-content/uploads/2022/11/What-is-Kundali-Matching-in-Marriage.jpg", caption:"Kundali Consultation"},
+  {src:"https://images.pexels.com/photos/8887200/pexels-photo-8887200.jpeg", caption:"Prasad Distribution"},
+  {src:"https://images.pexels.com/photos/8021229/pexels-photo-8021229.jpeg", caption:"Holy Fire"},
+  {src:"https://images.pexels.com/photos/30218192/pexels-photo-30218192.jpeg", caption:"Community Event"}
+];
+
+/* ---------- wisdom quotes ---------- */
+const wisdoms = [
+  "कर्मण्येवाधिकारस्ते मा फलेषु कदाचन — Bhagavad Gita 2.47",
+  "भक्ति ही परम लक्ष्य है; प्रेम ही सच्ची साधना है। — श्रीमद्भागवतम",
+  "ज्ञानं ब्रह्म — उपनिषद्: आत्मज्ञान सर्वोपरि।",
+  "सर्वे भवन्तु सुखिनः।",
+  "श्रद्धा और कर्म — साधना का मूल।"
+];
+let wisdomIndex = 0;
+
+/* ---------- render gallery ---------- */
+const galleryGrid = document.getElementById('galleryGrid');
+function renderGallery(){
+  galleryGrid.innerHTML = "";
+  galleryImages.forEach((g, i)=>{
+    const div = document.createElement('div');
+    div.className = 'gallery-item';
+    div.innerHTML = `<img loading="lazy" src="${g.src}" alt="${g.caption}"><div class="gallery-caption">${g.caption}</div>`;
+    div.addEventListener('click', ()=> openImgLightbox(i));
+    galleryGrid.appendChild(div);
+  });
+}
+
+/* ---------- image lightbox ---------- */
+function openImgLightbox(i){
+  const g = galleryImages[i];
+  const lb = document.getElementById('imgLightbox');
+  document.getElementById('lightboxImg').src = g.src;
+  document.getElementById('lightboxMeta').textContent = g.caption;
+  lb.style.display = 'flex';
+  lb.setAttribute('aria-hidden','false');
+}
+document.getElementById('closeImgLightbox').addEventListener('click', ()=>{
+  const lb = document.getElementById('imgLightbox');
+  lb.style.display = 'none';
+  lb.setAttribute('aria-hidden','true');
+  document.getElementById('lightboxImg').src = '';
+});
+
+/* ---------- book preview ---------- */
+function openBookPreview(url){
+  const frame = document.getElementById('bookPreviewFrame');
+  frame.src = url;
+  const lb = document.getElementById('bookPreview');
+  lb.style.display = 'flex';
+  lb.setAttribute('aria-hidden','false');
+}
+document.getElementById('closeBookPreview').addEventListener('click', ()=>{
+  const lb = document.getElementById('bookPreview');
+  lb.style.display = 'none';
+  lb.setAttribute('aria-hidden','true');
+  document.getElementById('bookPreviewFrame').src = '';
+});
+
+/* ---------- wisdom modal ---------- */
+function openWisdom(){
+  const idx = wisdomIndex % wisdoms.length;
+  wisdomIndex++;
+  document.getElementById('wisdomText').textContent = wisdoms[idx];
+  const lb = document.getElementById('wisdomLightbox');
+  lb.style.display = 'flex';
+  lb.setAttribute('aria-hidden','false');
+}
+document.getElementById('closeWisdom').addEventListener('click', ()=>{
+  const lb = document.getElementById('wisdomLightbox');
+  lb.style.display = 'none';
+  lb.setAttribute('aria-hidden','true');
+});
+document.getElementById('nextWisdomBtn').addEventListener('click', ()=>{
+  const idx = wisdomIndex % wisdoms.length;
+  wisdomIndex++;
+  document.getElementById('wisdomText').textContent = wisdoms[idx];
+});
+document.getElementById('shareWisdomBtn').addEventListener('click', ()=>{
+  const txt = encodeURIComponent(document.getElementById('wisdomText').textContent + " — Sri Sundram Acharya");
+  window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${txt}`,'_blank');
+});
+
+/* ---------- daily quote ---------- */
+function refreshDailyQuote(){
+  const q = wisdoms[Math.floor(Math.random()*wisdoms.length)];
+  const el = document.getElementById('dailyQuote');
+  if(el) el.textContent = q;
+}
+
+/* ---------- dark mode toggle ---------- */
+const darkToggle = document.getElementById('toggleDark');
+function setTheme(theme){
+  if(theme==='dark'){ document.documentElement.setAttribute('data-theme','dark'); localStorage.setItem('theme','dark'); }
+  else { document.documentElement.setAttribute('data-theme','light'); localStorage.setItem('theme','light'); }
+}
+darkToggle.addEventListener('click', ()=>{
+  const cur = document.documentElement.getAttribute('data-theme');
+  setTheme(cur==='dark' ? 'light' : 'dark');
+});
+(function(){ const saved = localStorage.getItem('theme') || 'light'; setTheme(saved); })();
+
+/* ---------- header hide on scroll ---------- */
+let lastScroll = 0;
+const header = document.querySelector('.site-header');
+window.addEventListener('scroll', ()=>{
+  const current = window.scrollY;
+  if(current > lastScroll && current > 100){
+    header.style.transform = 'translateY(-100%)';
+  } else {
+    header.style.transform = 'translateY(0)';
+  }
+  lastScroll = current;
+});
+
+/* ---------- intersection reveal ---------- */
+const io = new IntersectionObserver((entries)=>{ 
+  entries.forEach(en => en.isIntersecting && en.target.classList.add('visible')) 
+}, {threshold:0.07});
+document.querySelectorAll('section, .hero').forEach(el => io.observe(el));
+
+/* ---------- lightbox close on ESC / outside click ---------- */
+document.addEventListener('keydown', (e)=>{
+  if(e.key === 'Escape'){
+    document.querySelectorAll('.lightbox').forEach(lb => { 
+      lb.style.display='none'; lb.setAttribute('aria-hidden','true'); 
+    });
+    document.getElementById('bookPreviewFrame') && (document.getElementById('bookPreviewFrame').src='');
+  }
+});
+document.querySelectorAll('.lightbox').forEach(lb=>{
+  lb.addEventListener('click',(ev)=>{
+    if(ev.target === lb){ lb.style.display='none'; lb.setAttribute('aria-hidden','true'); }
+  });
+});
+
+
+
+/* ---------- pooja services accordion ---------- */
+document.querySelectorAll('.pooja-grid .pooja-card').forEach(card => {
+  card.addEventListener('toggle', () => {
+    if (!card.open) return;
+    document.querySelectorAll('.pooja-grid .pooja-card[open]').forEach(other => {
+      if (other !== card) other.open = false;
+    });
+  });
+});
+
+/* ---------- init ---------- */
+renderGallery();
+refreshDailyQuote();
+setInterval(refreshDailyQuote, 12*60*60*1000);
+</script>
+
+
+  <!-- Structured data for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Person",
+    "name":"Sri Sundram Acharya",
+    "description":"Vedic Priest, Astrologer and Spiritual Guide offering consultations, puja and Bhagavata Katha.",
+    "url":"https://srisundramacharya.com",
+    "telephone":"+917484045244",
+    "sameAs":["https://www.instagram.com/sri_sundram_acharya","https://x.com/Sri_sundram","https://www.youtube.com/@Sri_sundram_acharya"]
+  }
+  </script>
+</body>
+</html>

@@ -1,0 +1,1334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Book a Pooja | Sri Sundram Acharya
+    </title>
+
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+
+        body {
+
+            margin: 0;
+
+            font-family:
+                Arial,
+                sans-serif;
+
+            background:
+                #f7f3ec;
+
+            color:
+                #222;
+
+        }
+
+
+        header {
+
+            background:
+                white;
+
+            padding:
+                20px 30px;
+
+            box-shadow:
+                0 2px 10px
+                rgba(0,0,0,0.08);
+
+        }
+
+
+        .header-inner {
+
+            max-width:
+                1100px;
+
+            margin:
+                auto;
+
+            display:
+                flex;
+
+            justify-content:
+                space-between;
+
+            align-items:
+                center;
+
+        }
+
+
+        .brand {
+
+            font-size:
+                20px;
+
+            font-weight:
+                bold;
+
+        }
+
+
+        .brand span {
+
+            display:
+                block;
+
+            font-size:
+                13px;
+
+            color:
+                #777;
+
+            margin-top:
+                4px;
+
+            font-weight:
+                normal;
+
+        }
+
+
+        main {
+
+            width:
+                92%;
+
+            max-width:
+                900px;
+
+            margin:
+                40px auto;
+
+        }
+
+
+        .booking-card {
+
+            background:
+                white;
+
+            padding:
+                35px;
+
+            border-radius:
+                16px;
+
+            box-shadow:
+                0 8px 30px
+                rgba(0,0,0,0.08);
+
+        }
+
+
+        h1 {
+
+            margin-top:
+                0;
+
+            margin-bottom:
+                8px;
+
+        }
+
+
+        .subtitle {
+
+            color:
+                #777;
+
+            margin-bottom:
+                30px;
+
+        }
+
+
+        .form-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap:
+                20px;
+
+        }
+
+
+        .form-group {
+
+            display:
+                flex;
+
+            flex-direction:
+                column;
+
+        }
+
+
+        .full {
+
+            grid-column:
+                1 / -1;
+
+        }
+
+
+        label {
+
+            font-weight:
+                bold;
+
+            margin-bottom:
+                7px;
+
+        }
+
+
+        input,
+        select,
+        textarea {
+
+            width:
+                100%;
+
+            padding:
+                13px;
+
+            border:
+                1px solid #ccc;
+
+            border-radius:
+                8px;
+
+            font-size:
+                15px;
+
+            font-family:
+                Arial,
+                sans-serif;
+
+        }
+
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+
+            outline:
+                none;
+
+            border-color:
+                #e88924;
+
+        }
+
+
+        textarea {
+
+            min-height:
+                110px;
+
+            resize:
+                vertical;
+
+        }
+
+
+        .availability-message {
+
+            margin-top:
+                8px;
+
+            font-size:
+                13px;
+
+            color:
+                #777;
+
+        }
+
+
+        .submit-btn {
+
+            width:
+                100%;
+
+            margin-top:
+                25px;
+
+            padding:
+                14px;
+
+            border:
+                none;
+
+            border-radius:
+                8px;
+
+            background:
+                #e88924;
+
+            color:
+                white;
+
+            font-size:
+                16px;
+
+            font-weight:
+                bold;
+
+            cursor:
+                pointer;
+
+        }
+
+
+        .submit-btn:hover {
+
+            background:
+                #d97817;
+
+        }
+
+
+        .submit-btn:disabled {
+
+            background:
+                #aaa;
+
+            cursor:
+                not-allowed;
+
+        }
+
+
+        .message {
+
+            display:
+                none;
+
+            margin-top:
+                20px;
+
+            padding:
+                14px;
+
+            border-radius:
+                8px;
+
+            font-size:
+                14px;
+
+        }
+
+
+        .success {
+
+            display:
+                block;
+
+            background:
+                #e7f6ea;
+
+            color:
+                #217a35;
+
+        }
+
+
+        .error {
+
+            display:
+                block;
+
+            background:
+                #fdeaea;
+
+            color:
+                #b3261e;
+
+        }
+
+
+        .loading {
+
+            color:
+                #777;
+
+        }
+
+
+        @media (max-width: 700px) {
+
+            main {
+
+                width:
+                    94%;
+
+                margin:
+                    20px auto;
+
+            }
+
+
+            .booking-card {
+
+                padding:
+                    22px;
+
+            }
+
+
+            .form-grid {
+
+                grid-template-columns:
+                    1fr;
+
+            }
+
+
+            .full {
+
+                grid-column:
+                    auto;
+
+            }
+
+
+            .header-inner {
+
+                flex-direction:
+                    column;
+
+                align-items:
+                    flex-start;
+
+                gap:
+                    5px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <header>
+
+        <div class="header-inner">
+
+            <div class="brand">
+
+                Sri Sundram Acharya
+
+                <span>
+                    Pooja & Yagya Booking
+                </span>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <div class="booking-card">
+
+            <h1>
+                Book a Pooja / Yagya 🙏
+            </h1>
+
+            <p class="subtitle">
+                Fill in your details and select your preferred
+                service and date.
+            </p>
+
+
+            <form id="bookingForm">
+
+
+                <div class="form-grid">
+
+
+                    <!-- CUSTOMER NAME -->
+
+                    <div class="form-group">
+
+                        <label for="customerName">
+                            Your Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="customerName"
+                            placeholder="Enter your full name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- PHONE -->
+
+                    <div class="form-group">
+
+                        <label for="customerPhone">
+                            Phone Number
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="customerPhone"
+                            placeholder="Enter your phone number"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- EMAIL -->
+
+                    <div class="form-group">
+
+                        <label for="customerEmail">
+                            Email
+                        </label>
+
+                        <input
+                            type="email"
+                            id="customerEmail"
+                            placeholder="Enter your email"
+                        >
+
+                    </div>
+
+
+                    <!-- SERVICE -->
+
+                    <div class="form-group">
+
+                        <label for="bookingService">
+                            Pooja / Yagya
+                        </label>
+
+                        <select
+                            id="bookingService"
+                            required
+                        >
+
+                            <option value="">
+                                Loading services...
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- DATE -->
+
+                    <div class="form-group">
+
+                        <label for="bookingDate">
+                            Booking Date
+                        </label>
+
+                        <input
+                            type="date"
+                            id="bookingDate"
+                            required
+                        >
+
+                        <div
+                            id="availabilityMessage"
+                            class="availability-message"
+                        >
+                            Select a date to check availability.
+                        </div>
+
+                    </div>
+
+
+                    <!-- TIME -->
+
+                    <div class="form-group">
+
+                        <label for="bookingTime">
+                            Preferred Time
+                        </label>
+
+                        <input
+                            type="time"
+                            id="bookingTime"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- NOTES -->
+
+                    <div class="form-group full">
+
+                        <label for="customerNotes">
+                            Additional Requirements
+                        </label>
+
+                        <textarea
+                            id="customerNotes"
+                            placeholder="Tell us anything important about your booking..."
+                        ></textarea>
+
+                    </div>
+
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="submit-btn"
+                    id="submitBtn"
+                >
+                    Submit Booking
+                </button>
+
+
+            </form>
+
+
+            <div
+                id="message"
+                class="message"
+            ></div>
+
+
+        </div>
+
+    </main>
+
+
+    <script type="module">
+
+
+        /*
+        ============================================================
+        FIREBASE IMPORTS
+        ============================================================
+        */
+
+        import {
+            initializeApp
+        }
+        from
+        "https://www.gstatic.com/firebasejs/12.18.0/firebase-app.js";
+
+
+        import {
+            getFirestore,
+            collection,
+            getDocs,
+            addDoc,
+            doc,
+            getDoc,
+            serverTimestamp
+        }
+        from
+        "https://www.gstatic.com/firebasejs/12.18.0/firebase-firestore.js";
+
+
+        /*
+        ============================================================
+        FIREBASE CONFIG
+        ============================================================
+        */
+
+        const firebaseConfig = {
+
+            apiKey:
+                "AIzaSyDd5Ny7fZNKPbbZFcSBa45gSeDuBgZtxa8",
+
+            authDomain:
+                "srisundramacharya-9ce0e.firebaseapp.com",
+
+            projectId:
+                "srisundramacharya-9ce0e",
+
+            storageBucket:
+                "srisundramacharya-9ce0e.firebasestorage.app",
+
+            messagingSenderId:
+                "112436492132",
+
+            appId:
+                "1:112436492132:web:afc99f7aa4971fee9cec71"
+
+        };
+
+
+        /*
+        ============================================================
+        INITIALIZE FIREBASE
+        ============================================================
+        */
+
+        const app =
+            initializeApp(
+                firebaseConfig
+            );
+
+
+        const db =
+            getFirestore(app);
+
+
+        /*
+        ============================================================
+        DOM
+        ============================================================
+        */
+
+        const bookingForm =
+            document.getElementById(
+                "bookingForm"
+            );
+
+
+        const customerName =
+            document.getElementById(
+                "customerName"
+            );
+
+
+        const customerPhone =
+            document.getElementById(
+                "customerPhone"
+            );
+
+
+        const customerEmail =
+            document.getElementById(
+                "customerEmail"
+            );
+
+
+        const bookingService =
+            document.getElementById(
+                "bookingService"
+            );
+
+
+        const bookingDate =
+            document.getElementById(
+                "bookingDate"
+            );
+
+
+        const bookingTime =
+            document.getElementById(
+                "bookingTime"
+            );
+
+
+        const customerNotes =
+            document.getElementById(
+                "customerNotes"
+            );
+
+
+        const submitBtn =
+            document.getElementById(
+                "submitBtn"
+            );
+
+
+        const message =
+            document.getElementById(
+                "message"
+            );
+
+
+        const availabilityMessage =
+            document.getElementById(
+                "availabilityMessage"
+            );
+
+
+        /*
+        ============================================================
+        SERVICES
+        ============================================================
+        */
+
+        let allServices = [];
+
+
+        async function loadServices() {
+
+            bookingService.innerHTML = `
+                <option value="">
+                    Loading services...
+                </option>
+            `;
+
+
+            try {
+
+                const snapshot =
+                    await getDocs(
+                        collection(
+                            db,
+                            "services"
+                        )
+                    );
+
+
+                allServices = [];
+
+
+                snapshot.forEach(
+                    (item) => {
+
+                        const data =
+                            item.data();
+
+
+                        if (
+                            data.active !== false
+                        ) {
+
+                            allServices.push({
+
+                                id:
+                                    item.id,
+
+                                ...data
+
+                            });
+
+                        }
+
+                    }
+                );
+
+
+                allServices.sort(
+                    (a, b) =>
+                        String(
+                            a.name || ""
+                        ).localeCompare(
+                            String(
+                                b.name || ""
+                            )
+                        )
+                );
+
+
+                bookingService.innerHTML = `
+                    <option value="">
+                        Select a service
+                    </option>
+                `;
+
+
+                allServices.forEach(
+                    (service) => {
+
+                        const option =
+                            document.createElement(
+                                "option"
+                            );
+
+
+                        option.value =
+                            service.id;
+
+
+                        option.textContent =
+                            service.name;
+
+
+                        bookingService.appendChild(
+                            option
+                        );
+
+                    }
+                );
+
+
+                if (
+                    allServices.length === 0
+                ) {
+
+                    bookingService.innerHTML = `
+                        <option value="">
+                            No services available
+                        </option>
+                    `;
+
+                }
+
+            }
+            catch (error) {
+
+                console.error(
+                    "Service loading error:",
+                    error
+                );
+
+
+                bookingService.innerHTML = `
+                    <option value="">
+                        Unable to load services
+                    </option>
+                `;
+
+            }
+
+        }
+
+
+        /*
+        ============================================================
+        CHECK AVAILABILITY
+        ============================================================
+        */
+
+        async function checkAvailability(
+            date
+        ) {
+
+            if (!date) {
+
+                availabilityMessage.textContent =
+                    "Select a date to check availability.";
+
+                availabilityMessage.style.color =
+                    "#777";
+
+                return false;
+
+            }
+
+
+            try {
+
+                const availabilityRef =
+                    doc(
+                        db,
+                        "availability",
+                        date
+                    );
+
+
+                const availabilitySnapshot =
+                    await getDoc(
+                        availabilityRef
+                    );
+
+
+                if (
+                    !availabilitySnapshot.exists()
+                ) {
+
+                    availabilityMessage.textContent =
+                        "This date is not available for booking.";
+
+                    availabilityMessage.style.color =
+                        "#b3261e";
+
+                    return false;
+
+                }
+
+
+                const data =
+                    availabilitySnapshot.data();
+
+
+                if (
+                    data.status !==
+                    "available"
+                ) {
+
+                    availabilityMessage.textContent =
+                        "This date is currently unavailable.";
+
+                    availabilityMessage.style.color =
+                        "#b3261e";
+
+                    return false;
+
+                }
+
+
+                const slots =
+                    Number(
+                        data.slots ?? 0
+                    );
+
+
+                if (
+                    slots <= 0
+                ) {
+
+                    availabilityMessage.textContent =
+                        "No booking slots are available on this date.";
+
+                    availabilityMessage.style.color =
+                        "#b3261e";
+
+                    return false;
+
+                }
+
+
+                availabilityMessage.textContent =
+                    `${slots} booking slot(s) available on this date.`;
+
+
+                availabilityMessage.style.color =
+                    "#217a35";
+
+
+                return true;
+
+            }
+            catch (error) {
+
+                console.error(
+                    "Availability check error:",
+                    error
+                );
+
+
+                availabilityMessage.textContent =
+                    "Unable to check availability.";
+
+                availabilityMessage.style.color =
+                    "#b3261e";
+
+
+                return false;
+
+            }
+
+        }
+
+
+        /*
+        ============================================================
+        DATE CHANGE
+        ============================================================
+        */
+
+        bookingDate.addEventListener(
+            "change",
+            async () => {
+
+                await checkAvailability(
+                    bookingDate.value
+                );
+
+            }
+        );
+
+
+        /*
+        ============================================================
+        SUBMIT BOOKING
+        ============================================================
+        */
+
+        bookingForm.addEventListener(
+            "submit",
+            async (event) => {
+
+                event.preventDefault();
+
+
+                const name =
+                    customerName.value.trim();
+
+
+                const phone =
+                    customerPhone.value.trim();
+
+
+                const email =
+                    customerEmail.value.trim();
+
+
+                const serviceId =
+                    bookingService.value;
+
+
+                const date =
+                    bookingDate.value;
+
+
+                const time =
+                    bookingTime.value;
+
+
+                const notes =
+                    customerNotes.value.trim();
+
+
+                if (
+                    !name ||
+                    !phone ||
+                    !serviceId ||
+                    !date ||
+                    !time
+                ) {
+
+                    showMessage(
+                        "Please fill in all required fields.",
+                        "error"
+                    );
+
+                    return;
+
+                }
+
+
+                submitBtn.disabled =
+                    true;
+
+
+                submitBtn.textContent =
+                    "Checking availability...";
+
+
+                try {
+
+
+                    /*
+                    --------------------------------------------
+                    CHECK DATE
+                    --------------------------------------------
+                    */
+
+                    const available =
+                        await checkAvailability(
+                            date
+                        );
+
+
+                    if (!available) {
+
+                        submitBtn.disabled =
+                            false;
+
+                        submitBtn.textContent =
+                            "Submit Booking";
+
+                        return;
+
+                    }
+
+
+                    /*
+                    --------------------------------------------
+                    GET SERVICE
+                    --------------------------------------------
+                    */
+
+                    const selectedService =
+                        allServices.find(
+                            (service) =>
+                                service.id ===
+                                serviceId
+                        );
+
+
+                    if (
+                        !selectedService
+                    ) {
+
+                        showMessage(
+                            "Selected service is no longer available.",
+                            "error"
+                        );
+
+
+                        submitBtn.disabled =
+                            false;
+
+                        submitBtn.textContent =
+                            "Submit Booking";
+
+                        return;
+
+                    }
+
+
+                    /*
+                    --------------------------------------------
+                    SAVE BOOKING
+                    --------------------------------------------
+                    */
+
+                    submitBtn.textContent =
+                        "Submitting booking...";
+
+
+                    const bookingData = {
+
+                        customerName:
+                            name,
+
+                        customerPhone:
+                            phone,
+
+                        customerEmail:
+                            email,
+
+                        serviceId:
+                            selectedService.id,
+
+                        serviceName:
+                            selectedService.name,
+
+                        date:
+                            date,
+
+                        time:
+                            time,
+
+                        status:
+                            "pending",
+
+                        customerNotes:
+                            notes,
+
+                        createdAt:
+                            serverTimestamp(),
+
+                        updatedAt:
+                            serverTimestamp()
+
+                    };
+
+
+                    await addDoc(
+                        collection(
+                            db,
+                            "bookings"
+                        ),
+                        bookingData
+                    );
+
+
+                    /*
+                    --------------------------------------------
+                    SUCCESS
+                    --------------------------------------------
+                    */
+
+                    showMessage(
+                        "Your booking request has been submitted successfully. We will contact you for confirmation.",
+                        "success"
+                    );
+
+
+                    bookingForm.reset();
+
+
+                    availabilityMessage.textContent =
+                        "Select a date to check availability.";
+
+                    availabilityMessage.style.color =
+                        "#777";
+
+
+                }
+                catch (error) {
+
+                    console.error(
+                        "Booking submission error:",
+                        error
+                    );
+
+
+                    showMessage(
+                        "Unable to submit your booking. Please try again.",
+                        "error"
+                    );
+
+                }
+                finally {
+
+                    submitBtn.disabled =
+                        false;
+
+                    submitBtn.textContent =
+                        "Submit Booking";
+
+                }
+
+            }
+        );
+
+
+        /*
+        ============================================================
+        MESSAGE
+        ============================================================
+        */
+
+        function showMessage(
+            text,
+            type
+        ) {
+
+            message.textContent =
+                text;
+
+
+            message.className =
+                "message " + type;
+
+        }
+
+
+        /*
+        ============================================================
+        INITIAL LOAD
+        ============================================================
+        */
+
+        loadServices();
+
+    </script>
+
+</body>
+
+</html>

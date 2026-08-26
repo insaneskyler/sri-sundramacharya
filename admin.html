@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PanditJi Login | Sri Sundram Acharya</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            background: #f7f3ec;
+        }
+
+        .login-box {
+            width: 90%;
+            max-width: 420px;
+            background: white;
+            padding: 35px;
+            border-radius: 16px;
+            box-shadow: 0 10px 35px rgba(0,0,0,0.12);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 10px;
+            color: #222;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #777;
+            margin-bottom: 30px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 7px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 13px;
+            margin-bottom: 18px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        button {
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 8px;
+            background: #e88924;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #d97817;
+        }
+
+        #message {
+            margin-top: 18px;
+            text-align: center;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="login-box">
+
+        <h1>PanditJi Login</h1>
+
+        <div class="subtitle">
+            Sri Sundram Acharya
+        </div>
+
+        <form id="loginForm">
+
+            <label for="email">Email</label>
+            <input
+                type="email"
+                id="email"
+                placeholder="Enter your email"
+                required
+            >
+
+            <label for="password">Password</label>
+            <input
+                type="password"
+                id="password"
+                placeholder="Enter your password"
+                required
+            >
+
+            <button type="submit">
+                Login
+            </button>
+
+        </form>
+
+        <div id="message"></div>
+
+    </div>
+
+
+    <script type="module">
+
+    import { initializeApp }
+    from "https://www.gstatic.com/firebasejs/12.18.0/firebase-app.js";
+
+    import {
+        getAuth,
+        signInWithEmailAndPassword,
+        signOut
+    }
+    from "https://www.gstatic.com/firebasejs/12.18.0/firebase-auth.js";
+
+    import {
+        getFirestore,
+        doc,
+        getDoc
+    }
+    from "https://www.gstatic.com/firebasejs/12.18.0/firebase-firestore.js";
+
+
+    // Firebase configuration
+    const firebaseConfig = {
+        apiKey: "AIzaSyDd5Ny7fZNKPbbZFcSBa45gSeDuBgZtxa8",
+        authDomain: "srisundramacharya-9ce0e.firebaseapp.com",
+        projectId: "srisundramacharya-9ce0e",
+        storageBucket: "srisundramacharya-9ce0e.firebasestorage.app",
+        messagingSenderId: "112436492132",
+        appId: "1:112436492132:web:afc99f7aa4971fee9cec71"
+    };
+
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+
+    const auth = getAuth(app);
+    const db = getFirestore(app);
+
+
+    // Login elements
+    const loginForm = document.getElementById("loginForm");
+    const message = document.getElementById("message");
+
+
+    // Login
+    loginForm.addEventListener("submit", async (event) => {
+
+        event.preventDefault();
+
+        const email = document.getElementById("email").value.trim();
+        const password = document.getElementById("password").value;
+
+        message.textContent = "Logging in...";
+
+        try {
+
+            // 1. Authenticate user
+            const userCredential =
+                await signInWithEmailAndPassword(
+                    auth,
+                    email,
+                    password
+                );
+
+            const user = userCredential.user;
+
+
+            // 2. Get admin document from Firestore
+            const adminRef = doc(db, "users", "admin");
+            const adminSnap = await getDoc(adminRef);
+
+
+            // 3. Check if admin document exists
+            if (!adminSnap.exists()) {
+
+                await signOut(auth);
+
+                message.textContent =
+                    "Admin account is not configured.";
+
+                return;
+            }
+
+
+            // 4. Read admin information
+            const adminData = adminSnap.data();
+
+
+            // 5. Verify admin role and email
+            if (
+                adminData.role !== "admin" ||
+                adminData.active !== true ||
+                adminData.email.toLowerCase() !== user.email.toLowerCase()
+            ) {
+
+                await signOut(auth);
+
+                message.textContent =
+                    "You are not authorized to access the admin panel.";
+
+                return;
+            }
+
+
+            // 6. Everything is correct
+            message.textContent =
+                "Login successful! Redirecting...";
+
+
+            // 7. Redirect to dashboard
+            setTimeout(() => {
+
+                window.location.href = "dashboard.html";
+
+            }, 700);
+
+
+        } catch (error) {
+
+            console.error("Login error:", error);
+
+            message.textContent =
+                "Login failed. Please check your email and password.";
+
+        }
+
+    });
+
+</script>
+
+</body>
+</html>
